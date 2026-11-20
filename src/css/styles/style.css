@@ -96,6 +96,28 @@ a.a-underline:hover span {
   width: 100%;
 }
 
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.slider-arrow:hover {
+  transform: translateY(-50%) scale(1.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.slider-arrow.left { left: -10px; }
+.slider-arrow.right { right: -10px; }
+
 /* ================================================== */
 
 /*  header  */
@@ -16685,6 +16707,12 @@ img {
   100% {
     transform: translateX(100%);
   }
+}
+
+.skeleton-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
 }
 
 .nft-image {
